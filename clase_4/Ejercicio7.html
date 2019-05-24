@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="application/javascript">
+            const totalCuenta = parseFloat(prompt("Total de la cuenta:"))
+            const numeroPersonas = parseFloat(prompt("Personas a pagar:"))
+            const porcentajePropina = parseFloat(prompt("Porcentaje de propina a dejar:"))
+            const totalAPagarCadaUno = (totalCuenta + ((totalCuenta * porcentajePropina) / 100)) / numeroPersonas
+            alert("Cada quien debe pagar: " + totalAPagarCadaUno)
+        </script>
+    </head>
+</html>
