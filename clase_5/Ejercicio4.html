@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="application/javascript">
+            const inCalExamen1 = parseInt(prompt("Examen 1:"))
+            const inCalExamen2 = parseInt(prompt("Examen 2:"))
+            const inCalExamen3 = parseInt(prompt("Examen 3:"))
+            const CalMinAprobar = 6
+            const CanMinPremio = 8.5
+            promedio =( inCalExamen1 + inCalExamen2 + inCalExamen3 ) / 3
+            let msg = "Castigo"
+            if(CanMinPremio <= promedio){
+                msg = "Premio"
+            }
+            else if(CalMinAprobar <= promedio){
+                msg = "Pasaste pero no hay premio"
+            }
+
+            let outMsg = msg +", Promedio de:"+ promedio
+            alert(outMsg)
+        </script>
+    </head>
+</html>
