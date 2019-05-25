@@ -1,0 +1,105 @@
+1.- Cuando tengo hambre estoy triste, si “hambre” es un valor booleano (true o false), 
+tienes que descifrar si estoy feliz o tengo hambre
+2.- Soy en personaje en un videojuego, y dependiendo del nivel tengo cierto título: 
+Cuando empiezo soy “Aprendiz” si llego al nivel 10 evoluciono a “Acróbata” y si paso del nivel 20 me hago un “ninja”
+ ¿Que soy actualmente?
+3.- Vivo con varios roomies y siempre me roban la comida, entonces le puse una contraseña al refrigerador. 
+Tienes que hacer un programa que valide si mi nombre es el correcto y si mi contraseña también.
+4.- Tengo 3 examenes este semestre y mi papá me dijo que me daría un premio si tengo un promedio final de 8.5 o más,
+pero si repruebo me va a castigar.  ¿Cual fue mi destino?
+5.- Estoy inscrito a muchas clases porque me gusta aprender: Los lunes y miércoles voy a Historia, los martes a natacion,
+los jueves a esgrima y los demás días descanso. Dime a qué clase voy si te digo un día.
+6.- Estoy jugando un juego de dados, gano si saco el mismo número en dos de los tres dados. Descubre si gané o no.
+
+Ejercicio1
+INICIO
+    LEER(hambre) //"true or false"
+    SI (true === hambre)
+        outMsg = "Tiene hambre"
+    SINO
+        outMsg = "No tiene hambre"
+    ESCRIBIR(outMsg)
+FIN
+
+Ejercicio2
+    LEER(inNivel) //"Nivel del jugador"
+    nivelJug = "Aprendiz"
+    SI (20 <= inNivel)
+        nivelJug = "Ninja"
+    Y SI(10 <= inNivel)
+        nivelJug = "Acrobata"
+
+    outMsg = nivelJug
+    ESCRIBIR(outMsg)
+
+Ejercicio3
+    LEER(inNombre) //"Nombre usuario"
+    LEER(inPass) //"Constrase;a"
+    nombre = "Luis03"
+    password = "1234"
+    let msg = "Incorrecto"
+    SI(nombre === inNombre && password === inPass)
+        msg = "Correcto"
+
+    let outMsg = msg
+    ESCRIBIR(outMsg)
+
+Ejercicio4
+    LEER(inCalExamen1) //"Examen 1"
+    LEER(inCalExamen2) //"Examen 2"
+    LEER(inCalExamen3) //"Examen 3"
+    CalMinAprobar = 6
+    CanMinPremio = 8.5
+    promedio =( inCalExamen1 + inCalExamen2 + inCalExamen3 ) / 3
+    let msg = "Castigo"
+
+    SI (CanMinPremio <= promedio)
+        msg = "Premio"
+    Y SI (CalMinAprobar <= promedio)
+        msg = "Pasaste pero no hay premio"
+
+    outMsg = msg +", Promedio de:"+ promedio
+    ESCRIBIR(outMsg)
+
+Ejercicio5
+    LEER(inDia) //"Que dia es?"
+    DiasSemana =["Lunes", "Martes","Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"]
+
+    SI(inDia === DiasSemana[0] || inDia === DiasSemana[2] || inDia === DiasSemana[4]){
+        msg = "Clase de: Historia"
+
+    Y SI(inDia === DiasSemana[1] || inDia === DiasSemana[3])
+        msg = "Clase de: Esgrima"
+
+    SINO
+        msg = "Descansar"
+    
+
+    outMsg = msg
+    ESCRIBIR(outMsg)
+
+Ejercicio6
+    LEER(inDado1) // "Resultado de dado 1"
+    LEER(inDado2) // "Resultado de dado 2"
+    LEER(inDado3) // "Resultado de dado 3"
+
+    msg = "todos los dados son diferentes"
+
+    SI(inDado1 === inDado2 === inDado3)
+
+        msg = "todos los dados son iguales"
+
+    // 1 1 1  Todos iguales
+    // 1 1 2  Primer y Segundo lanzamientos iguales
+    // 1 2 1  Primer y Tercero lanzamiento iguales
+    // 1 2 2  Segundo y Tercero lanzamiento iguales
+
+    Y SI(inDado1 === inDado2 || inDado1 === inDado3 || (inDado2 === inDado3)
+
+    {
+        msg = "Dos dados salieron iguales"
+    }
+
+    let outMsg = msg
+    alert(outMsg)
+
