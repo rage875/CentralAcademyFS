@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="application/javascript">
+            const num1 = parseInt(prompt("Numero 1:"))
+            const num2 = parseInt(prompt("Numero 2:"))
+            let cantNum = num2-num1
+            let serieNumeros = Array(cantNum + 1);
+
+            if(0 < cantNum){
+                for(i=0; i < cantNum; i++){
+                    serieNumeros[i] = num1 + i
+                }
+                alert(serieNumeros)
+            }
+            else{
+                alert("Numeros negativos, no soporta serie")
+            }
+        </script>
+    </head>
+</html>

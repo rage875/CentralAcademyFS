@@ -1,0 +1,37 @@
+
+Ejercicio1
+Paco hizo travesuras en el salón y la maestra lo castigó, para poder salir tiene escribir en el pizarrón todos
+los números del num1 al num2, ¿puedes ayudarle a Paco a hacer un algoritmo que haga esto por el?
+INICIO
+    LEER(num1)
+    LEER(num2)
+    cantNum = num2-num1
+    serieNumeros = Array(cantNum + 1)
+
+    SI((0 < cantNum)
+        PARA contador = 0- MIENTRAS contador <= cantNum AUMENTA contador = contador + 1
+            serieNumeros[contador] = num1 + contador
+        FIN-PARA
+
+        ESCRIBIR(serieNumeros)
+    SINO
+        ESCRIBIR("Numeros negativos, no soporta serie")
+FIN
+
+Ejercicio2
+Fui al nutriologo y me dijo que estaba gordito. Si mi peso es la variable peso y tengo que llegar al peso ideal 
+¿En cuantas semanas llegaré a ese peso si bajo X kilos por semana?
+INICIO
+    LEER(peso)
+    LEER(pesoIdeal)
+    LEER(kilosPorSemana)
+    numSemanas = 0
+    pesoEnKilosABajar = peso - pesoIdeal
+
+    MIENTRAS(0 < pesoEnKilosABajar)
+        pesoEnKilosABajar = pesoEnKilosABajar - kilosPorSemana
+        numSemanas++
+    FIN-MIENTRAS
+
+    ESCRIBIR("Numero de semanas: " + numSemanas)
+FIN

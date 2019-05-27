@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="application/javascript">
+            const peso = parseInt(prompt("Peso actual:"))
+            const pesoIdeal = parseInt(prompt("Peso deseado:"))
+            const kilosPorSemana = parseInt(prompt("Kilos por semana a bajar:"))
+            numSemanas = 0
+            pesoEnKilosABajar = peso - pesoIdeal
+
+            while(0 < pesoEnKilosABajar)
+            {
+                pesoEnKilosABajar = pesoEnKilosABajar - kilosPorSemana
+                numSemanas++
+            }
+            alert("Numero de semanas: " + numSemanas)
+        </script>
+    </head>
+</html>
